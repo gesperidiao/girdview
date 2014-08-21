@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="132dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/Button01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu" />
+
+        <Button
+            android:id="@+id/Button09"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Keyboard" />
+
+        <Button
+            android:id="@+id/Button08"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="History" />
+
+        <Button
+            android:id="@+id/Button07"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="People" />
+
+        <Button
+            android:id="@+id/Button06"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verbs" />
+
+        <Button
+            android:id="@+id/Button05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Expressions" />
+
+        <Button
+            android:id="@+id/Button04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gallery" />
+
+        <Button
+            android:id="@+id/Button03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/Button02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Clear" />
+
+            <LinearLayout
+                android:layout_width="670dp"
+                android:layout_height="match_parent" >
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button30"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Play" />
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" />
+    </LinearLayout>
+
+</LinearLayout>
