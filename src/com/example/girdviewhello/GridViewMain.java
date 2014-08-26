@@ -2,6 +2,10 @@ package com.example.girdviewhello;
 
 import java.util.Locale;
 
+import com.example.models.Category;
+import com.example.models.Sentence;
+import com.example.models.Symbol;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,32 +15,112 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class GridViewMain extends Activity {
 
 	TextToSpeech ttobj;
+	Sentence mSentence;
+	Symbol symbolAux;
+	Boolean mVolumeOn = true;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_grid_view_main);
 
-		GridView gridview = (GridView) findViewById(R.id.gridview);
-		gridview.setAdapter(new ImageAdapter(this));
+		/*
+		 * Initializing Grid Views
+		 */
+		GridView gridviewYelow = (GridView) findViewById(R.id.gridview);
+		gridviewYelow.setAdapter(new ImageAdapter(this, 0xFFFFF849, Category.PRONOUN));
 
+		GridView gridviewGreen = (GridView) findViewById(R.id.gridview2);
+		gridviewGreen.setAdapter(new ImageAdapter(this, 0xff00ff00, Category.VERB));
+		
+		GridView gridviewOrange = (GridView) findViewById(R.id.gridview3);
+		gridviewOrange.setAdapter(new ImageAdapter(this, 0xffFFA149, Category.NOUN));
+		
+		GridView gridviewBlue = (GridView) findViewById(R.id.gridview4);
+		gridviewBlue.setAdapter(new ImageAdapter(this, 0xff0000ff, Category.ADJECTIVE));
+		
 		Intent intent = new Intent();
 		intent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
 		startActivityForResult(intent, 0);
 
-		gridview.setOnItemClickListener(new OnItemClickListener() {
+		mSentence = new Sentence();
+		
+		OnItemClickListener onItemClickListener = new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View v,
 					int position, long id) {
-				Toast.makeText(GridViewMain.this, "" + position,
-						Toast.LENGTH_SHORT).show();
-				ttobj.speak("" + v.getTag(), TextToSpeech.QUEUE_FLUSH, null);
+				
+				symbolAux = (Symbol) v.getTag();
+				mSentence.addSymbol(symbolAux);
+				
+				if(mVolumeOn)ttobj.speak("" + symbolAux.getTerm().getWord(), TextToSpeech.QUEUE_FLUSH, null);
 
+			}
+		};
+		
+		gridviewYelow.setOnItemClickListener(onItemClickListener);
+		gridviewGreen.setOnItemClickListener(onItemClickListener);
+		gridviewOrange.setOnItemClickListener(onItemClickListener);
+		gridviewBlue.setOnItemClickListener(onItemClickListener);
+
+		
+		/*
+		 * Clear, Play and On/Off buttons
+		 */
+		ImageButton btnPlay = (ImageButton) findViewById(R.id.btnPlay);
+		ImageButton btnClear = (ImageButton) findViewById(R.id.btnClear);
+		final ImageButton btnOnOff = (ImageButton) findViewById(R.id.btnOnOff);
+		
+		/*
+		 * Button Listeners
+		 */
+		btnClear.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				mSentence.clearSentence();
+				Toast.makeText(GridViewMain.this, "Sentence clear.",
+						Toast.LENGTH_SHORT).show();
+				
+			}
+		});
+		
+		btnPlay.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Symbol s;
+				for(int i=0; i < mSentence.getSymbolList().size(); i++){
+					s = mSentence.getSymbolList().get(i);
+					ttobj.speak("" + s.getTerm().getWord(), TextToSpeech.QUEUE_ADD, null);
+				}
+				
+			}
+		});
+		
+		btnOnOff.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				if(mVolumeOn){ //switch Off
+					btnOnOff.setImageResource(R.drawable.ic_action_volume_muted);
+					mVolumeOn = false;
+					Toast.makeText(GridViewMain.this, "Echo Off",
+							Toast.LENGTH_SHORT).show();
+				}else{ //switch On
+					btnOnOff.setImageResource(R.drawable.ic_action_volume_on);
+					Toast.makeText(GridViewMain.this, "Echo On",
+							Toast.LENGTH_SHORT).show();
+					mVolumeOn = true;
+				}
+				
 			}
 		});
 	}

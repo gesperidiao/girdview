@@ -7,69 +7,65 @@
 
     <LinearLayout
         android:id="@+id/LinearLayout2"
-        android:layout_width="132dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-        <Button
+        <ImageButton
             android:id="@+id/Button01"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:src="@drawable/ic_action_computer"
             android:text="Home" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Menu" />
+        <ImageButton
+            android:id="@+id/Button03"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:src="@drawable/ic_action_search"
+            android:text="Button" />
 
-        <Button
-            android:id="@+id/Button09"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Keyboard" />
-
-        <Button
+        <ImageButton
             android:id="@+id/Button08"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:src="@drawable/ic_action_time"
             android:text="History" />
 
-        <Button
+        <ImageButton
             android:id="@+id/Button07"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:src="@drawable/ic_action_group"
             android:text="People" />
 
-        <Button
-            android:id="@+id/Button06"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Verbs" />
-
-        <Button
+        <ImageButton
             android:id="@+id/Button05"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:src="@drawable/ic_action_chat"
             android:text="Expressions" />
 
-        <Button
+        <ImageButton
             android:id="@+id/Button04"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:src="@drawable/ic_action_add_to_queue"
             android:text="Gallery" />
 
-        <Button
-            android:id="@+id/Button03"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+        <ImageButton
+            android:id="@+id/Button09"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:src="@drawable/ic_action_keyboard"
+            android:text="Keyboard" />
 
-        <Button
-            android:id="@+id/Button02"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+        <ImageButton
+            android:id="@+id/button2"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:src="@drawable/ic_action_settings"
+            android:text="Menu" />
     </LinearLayout>
 
     <LinearLayout
@@ -84,34 +80,98 @@
             android:layout_height="100dp"
             android:orientation="horizontal" >
 
-            <Button
-                android:id="@+id/button1"
+            <ImageButton
+                android:id="@+id/btnClear"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:src="@drawable/ic_action_discard"
                 android:text="Clear" />
 
             <LinearLayout
-                android:layout_width="670dp"
-                android:layout_height="match_parent" >
+                android:layout_width="628dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.49" >
             </LinearLayout>
 
-            <Button
-                android:id="@+id/button30"
+            <ImageButton
+                android:id="@+id/btnPlay"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:src="@drawable/ic_action_play_over_video"
                 android:text="Play" />
+
+            <!--
+                 <ToggleButton
+                android:id="@+id/btnOnOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="" android:textOff=""
+                android:background="@drawable/btn_on_off"
+                android:checked="true"
+                />
+            -->
+
+            <ImageButton
+                android:id="@+id/btnOnOff"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_action_volume_on" />
         </LinearLayout>
 
-        <GridView
-            android:id="@+id/gridview"
+        <LinearLayout
+            android:id="@+id/LinearLayout5"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:columnWidth="90dp"
-            android:gravity="center"
-            android:horizontalSpacing="10dp"
-            android:numColumns="auto_fit"
-            android:stretchMode="columnWidth"
-            android:verticalSpacing="10dp" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:columnWidth="90dp"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="auto_fit"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+
+            <GridView
+                android:id="@+id/gridview2"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:columnWidth="90dp"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="auto_fit"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+
+            <GridView
+                android:id="@+id/gridview3"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:columnWidth="90dp"
+                android:gravity="center"
+                android:horizontalSpacing="5dp"
+                android:numColumns="auto_fit"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+
+            <GridView
+                android:id="@+id/gridview4"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:columnWidth="90dp"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="auto_fit"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
