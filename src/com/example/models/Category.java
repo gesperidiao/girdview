@@ -3,20 +3,20 @@ package com.example.models;
 public enum Category {
 	NOUN(0), VERB(1), PRONOUN(2), ADJECTIVE(3), DEFAULT(4);
 	private final int category;
-	private final String color;
+	private final int color;
 	
 	Category(int c){
 		this.category = c;
 		switch(c){
-		case 0: this.color = "#FFCC66";
+		case 0: this.color = 0xffFFA149;
 				break;
-		case 1: this.color = "#99FF99";
+		case 1: this.color = 0xff00ff00;
 				break;
-		case 2: this.color = "#FFFF99";
+		case 2: this.color = 0xFFFFF849;
 				break;
-		case 3: this.color = "#0099FF";
+		case 3: this.color = 0xff0000ff;
 				break;
-		default: this.color = "#FFFFFF";		
+		default: this.color = 0xffffffff;		
 		}
 	}
 	@Override
@@ -44,7 +44,7 @@ public enum Category {
 		}
 	}
 	
-	public String getColor(){
+	public int getColor(){
 		return this.color;
 	}
 }

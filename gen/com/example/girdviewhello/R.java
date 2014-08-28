@@ -87,27 +87,28 @@ public final class R {
         public static final int voce=0x7f02003e;
     }
     public static final class id {
-        public static final int Button01=0x7f080002;
-        public static final int Button03=0x7f080003;
-        public static final int Button04=0x7f080007;
-        public static final int Button05=0x7f080006;
-        public static final int Button07=0x7f080005;
-        public static final int Button08=0x7f080004;
-        public static final int Button09=0x7f080008;
         public static final int LinearLayout1=0x7f080000;
         public static final int LinearLayout2=0x7f080001;
         public static final int LinearLayout3=0x7f08000a;
         public static final int LinearLayout4=0x7f08000b;
-        public static final int LinearLayout5=0x7f08000f;
-        public static final int action_settings=0x7f080014;
+        public static final int LinearLayout5=0x7f080010;
+        public static final int action_settings=0x7f080015;
         public static final int btnClear=0x7f08000c;
-        public static final int btnOnOff=0x7f08000e;
-        public static final int btnPlay=0x7f08000d;
-        public static final int button2=0x7f080009;
-        public static final int gridview=0x7f080010;
-        public static final int gridview2=0x7f080011;
-        public static final int gridview3=0x7f080012;
-        public static final int gridview4=0x7f080013;
+        public static final int btnExpressions=0x7f080006;
+        public static final int btnGallery=0x7f080007;
+        public static final int btnHistory=0x7f080004;
+        public static final int btnHome=0x7f080002;
+        public static final int btnKeyboard=0x7f080008;
+        public static final int btnOnOff=0x7f08000f;
+        public static final int btnPeople=0x7f080005;
+        public static final int btnPlay=0x7f08000e;
+        public static final int btnSearch=0x7f080003;
+        public static final int btnSettings=0x7f080009;
+        public static final int gridview=0x7f080011;
+        public static final int gridview2=0x7f080012;
+        public static final int gridview3=0x7f080013;
+        public static final int gridview4=0x7f080014;
+        public static final int linear_layout_sentence=0x7f08000d;
     }
     public static final class layout {
         public static final int activity_grid_view_main=0x7f030000;

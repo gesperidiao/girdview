@@ -12,60 +12,60 @@
         android:orientation="vertical" >
 
         <ImageButton
-            android:id="@+id/Button01"
+            android:id="@+id/btnHome"
             android:layout_width="58dp"
             android:layout_height="58dp"
             android:src="@drawable/ic_action_computer"
             android:text="Home" />
 
         <ImageButton
-            android:id="@+id/Button03"
+            android:id="@+id/btnSearch"
             android:layout_width="58dp"
             android:layout_height="58dp"
             android:src="@drawable/ic_action_search"
             android:text="Button" />
 
         <ImageButton
-            android:id="@+id/Button08"
+            android:id="@+id/btnHistory"
             android:layout_width="58dp"
             android:layout_height="58dp"
             android:src="@drawable/ic_action_time"
             android:text="History" />
 
         <ImageButton
-            android:id="@+id/Button07"
+            android:id="@+id/btnPeople"
             android:layout_width="58dp"
             android:layout_height="58dp"
             android:src="@drawable/ic_action_group"
             android:text="People" />
 
         <ImageButton
-            android:id="@+id/Button05"
+            android:id="@+id/btnExpressions"
             android:layout_width="58dp"
             android:layout_height="58dp"
             android:src="@drawable/ic_action_chat"
             android:text="Expressions" />
 
         <ImageButton
-            android:id="@+id/Button04"
+            android:id="@+id/btnGallery"
             android:layout_width="58dp"
             android:layout_height="58dp"
             android:src="@drawable/ic_action_add_to_queue"
             android:text="Gallery" />
 
         <ImageButton
-            android:id="@+id/Button09"
+            android:id="@+id/btnKeyboard"
             android:layout_width="58dp"
             android:layout_height="58dp"
             android:src="@drawable/ic_action_keyboard"
             android:text="Keyboard" />
 
         <ImageButton
-            android:id="@+id/button2"
+            android:id="@+id/btnSettings"
             android:layout_width="58dp"
             android:layout_height="58dp"
             android:src="@drawable/ic_action_settings"
-            android:text="Menu" />
+            android:text="Settings" />
     </LinearLayout>
 
     <LinearLayout
@@ -88,6 +88,8 @@
                 android:text="Clear" />
 
             <LinearLayout
+                android:id="@+id/linear_layout_sentence"
+                android:orientation="horizontal"
                 android:layout_width="628dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.49" >
